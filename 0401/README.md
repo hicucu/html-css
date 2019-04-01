@@ -3,6 +3,7 @@
 - flex-direction을 이용하여 가로로 정렬
 - justify-content를 이용하여 group1~3의 사이를 균등하게 분할
 - IE11에서 이용 불가
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 # float
 - IE11에서 flex의 사용이 불가하여 IE11 호환이 필요한 경우 사용가능
