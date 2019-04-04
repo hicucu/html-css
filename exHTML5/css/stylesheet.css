@@ -1,29 +1,242 @@
 @charset "utf-8";
+@import url("http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("./fontello.css");
 @import url("./normalize.css");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 *, *::before, *::after{
     box-sizing: border-box;
 }
+/* 기본 스타일 */
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.4rem;    
+    font-family: 'Spoqa Han Sans', sans-serif;
+    font-weight: 400;
+    background:  url("./images/bg_flower.png") no-repeat 50% 0, linear-gradient(#aaa  0px, #ccc 46%, #eee 70%, #fff 100%) ,#aaa;
+    color: #181818;
+}
+/* 링크 스타일 */
+a{
+    color: inherit;
+    text-decoration:none;
+}
+/* a:link{
+    color: green;
+}
+a:hover, a:focus{
+    color:red;
+}
+a:visited{
+    color: gray;
+} */
+/* 숨긴 컨턴츠 */
+.readable-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+}
+/* float 이슈를 해결하기 위한 CSS 모듈 */
 .clearfix::after{    
     content:"";
     background: yellow;
     display: block;
     clear: both;
-}/* float 이슈를 해결하기 위한 CSS 모듈 */
-
-.container{
-    background: silver;    
 }
 .header, .visual, .main, .slogan, .footer{
     width: 940px;
     margin: 0 auto;
 }
+/* 헤더 */
 .header{
-    background: yellow;    
-    height: 10vh;    
+    background: #fff;    
+    position: relative;  
+    min-height: 100px;  
+    padding: 0 30px 38px;
+    min-width: 100px;
+    border-radius: 0 0 15px 15px;
 }
-.visual{
-    background: orange;    
-    height: 120px;
+/* 로고 */
+.logo{    
+    position: absolute;
+    top: 50px;
+    left: 65px;
+    z-index: 100;
+}
+/* 멤버 링크 */ 
+.member{        
+    text-align: right;
+    position: relative;
+    padding: 2px;      
+    right: -10px;    
+}
+.member li, .member a{    
+    display: inline-block;
+}
+.member li:nth-child(n+2)::before{
+    content: ":";    
+}
+.member a{
+    padding: 8px 7px 7px 10px;   
+}
+/* 메인 메뉴 */
+.menu{
+    margin-top: 5px;
+    position: relative;
+    padding-left: 225px;
+    height: 47px;
+    border-radius: 0 0 5px 5px;
+    border-top: 2px solid #181818;
+    background: #e25d2d linear-gradient(to bottom, #f98f31 0%,#e25d2d 33%,#e25d2d 70%,#f98f31 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
+}
+.menu-item{    
+    float: left;    
+    position: relative;    
+}
+.menu-item-text{
+    display: block;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 45px; /*부모 높이 - 부모 border*/
+    padding: 0 20px;
+    border-left: 2px solid rgba(255, 255, 255, .5);    
+    text-shadow: 1px 0 0 #000000, 0 1px 0 #000000, 0 -1px 0 #000000, -1px 0px 0 #000000;    
+}
+.menu-act .menu-item-text::after{
+    content: "";    
+    display: block;
+    border-bottom: 2px solid #000000;    
+}
+.menu-act .menu-item-text{
+    color: #ff0 !important;
+    
+}
+.sub-menu{
+    background-color: aqua;
+    position: absolute;        
+    top: 47px;    
+    white-space: nowrap;    
+    display: none;
+}
+.menu-act .sub-menu{
+    display: block !important;
+}
+.sub-menu1, .sub-menu2, .sub-menu3{
+    left: 0;
+}
+.sub-menu4, .sub-menu5, .sub-menu6{
+    right: 0;
+}
+.sub-menu li, .sub-menu a{
+    display: inline-block;    
+}
+.sub-menu a
+{
+    padding: 8px 0;
+    margin-right: 10px;
+}
+/* 비주얼 */
+@keyframes textAni{
+    0%{
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0);
+        transform: translate(0, 0);
+    }
+    100%{
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        transform: translate(400px, 75px);
+    }
+}
+/* 배경애니메이션 */
+@keyframes flowerAni{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.visual{    
+    height: 120px;      
+    position: relative;
+}
+.visual::before, .visual::after{
+    /* animation-name: flowerAni;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;     */
+    animation: flowerAni 2s infinite alternate;
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+}
+.visual::before{
+    background-image: url("./images/ani_flower_01.png"), url("./images/ani_flower_02.png");    
+    background-position: 0 -10px, 670px 0;    
+}
+.visual::after{
+    background-image: url("./images/ani_flower_03.png"), url("./images/ani_flower_04.png");        
+    background-position: 300px 0, 800px 0;
+    animation-delay: 1s;
+}
+/* 텍스트 에니메이션 */
+.visual-text{
+    font-family: Georgia, 'Times New Roman', Times, serif
+    position: absolute;
+    display: inline-block;
+    z-index: 100;
+    animation-name: textAni;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
 }
 .main{
     background: lime;            
