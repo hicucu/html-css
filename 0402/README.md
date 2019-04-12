@@ -8,6 +8,7 @@
 > float
 > display
 > block
+
 >> inline
 >> <br> inline-block
 >> <br> flex

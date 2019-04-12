@@ -1,3 +1,5 @@
+# 시멘틱 마크업
+```
 article.term
     h2.term-head
     div.term-body
@@ -16,7 +18,7 @@ section.term
                 img
             dd.term-list-brief
                 text
-    
+```    
 
 # img
 ```html
