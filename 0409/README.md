@@ -22,8 +22,8 @@ section
 
 
 # time
-> ## datetime 필요
-> ## time[datetime="2019-04-09T11:18:27"]
+>  datetime 필요
+>  time[datetime="2019-04-09T11:18:27"]
 
 
 # aria 이용한 title
@@ -85,5 +85,5 @@ section
 ```
 
 # javascritp
-> ## defer
-> > ### defer 속성은 HTML 구문 분석이 완전히 완료되면 스크립트 파일을 실행하도록 브라우저에 지시
+>  defer
+> >  defer 속성은 HTML 구문 분석이 완전히 완료되면 스크립트 파일을 실행하도록 브라우저에 지시
