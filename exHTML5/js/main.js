@@ -2,6 +2,7 @@ var item = $(".menu-item");
 var itemSubLink = $(".sub-menu a");
 var tab = $(".tab");
 var section = $(".notice, .pds");
+var list = $(".related-list");
 
 item.attr("tabindex", "0");
 itemSubLink.attr("class", "icon-dot-circled");
@@ -17,4 +18,12 @@ tab.on("keyup click", function(e){
         section.removeClass("board-act");
         $(this).parent().addClass("board-act");
     }
+});
+
+//관련 사이트 목록 제어를 위한 스크립트
+list.on("mouseover focusin", function(){    
+    $(this).addClass("list-act");
+});
+list.on("mouseout focuslever", function(){    
+    $(this).removeClass("list-act");
 });
