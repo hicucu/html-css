@@ -15,7 +15,7 @@
 >>  https://seulbinim.github.io/WSA/form.html#input-%EC%9A%94%EC%86%8C
 >>  https://miketaylr.com/pres/html5/forms2.html
 
-#text-indent
+# text-indent
 > 들여쓰기
 > block에서만 가능
 > 음수값이면 내여쓰기
