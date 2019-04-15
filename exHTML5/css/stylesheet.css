@@ -1099,7 +1099,7 @@ a:visited{
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: -5px;
     left: 0;
     background: url("./images/coffee.png") no-repeat;
 }
@@ -1113,9 +1113,42 @@ a:visited{
     top:10px;
 }
 .footer-bg{
-    background: purple;    
+    background: #aaa linear-gradient(to bottom, #aaa  0px, #eee 46%, #fff 70%, #fff 100%);
 }
-.footer{
-    background: yellow;    
-    height: 10vh;
+.footer{    
+    position: relative;
+    padding: 15px 100px 15px 180px;
+}
+.footer-logo{    
+    position: absolute;
+    top: 35px;
+    left: 40px;
+}
+.badge{
+    position: absolute;
+    top: 15px;
+    right: 0;;
+}
+.guide{
+    background: #7b8385;
+    color: #fff;
+    padding: 4px 0;
+    text-align: center;
+    border-radius: 20px;
+}
+.guide li, .guide a{
+    display: inline-block;
+    
+}
+
+.guide a{
+    padding: 8px 10px;
+    text-transform: uppercase;  
+}
+
+.address{
+    margin-top: 10px;
+}
+.address{
+    margin-right: 15px;
 }
